@@ -1,3 +1,4 @@
+import AlignItems from "./AlignItems";
 import "./App.css";
 import JustifyContent from "./JustifyContent";
 
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <div id="container">
         <JustifyContent />
+        <AlignItems />
       </div>
     </div>
   );
