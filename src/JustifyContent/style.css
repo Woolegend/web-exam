@@ -1,0 +1,28 @@
+.flex-container {
+  width: 100%;
+  display: flex;
+  padding: 16px;
+  border: 2px solid grey;
+  border-radius: 8px;
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
