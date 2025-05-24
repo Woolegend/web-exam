@@ -1,0 +1,47 @@
+.main-container {
+  position: relative;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 800px;
+}
+
+.box {
+  display: inline-block;
+  margin-right: 40px;
+  width: 160px;
+  height: 160px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: whitesmoke;
+
+  &:nth-child(2) {
+    background-color: antiquewhite;
+  }
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.relative {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.absolute {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.sticky {
+  position: sticky;
+  top: 20px;
+}
+
+.fixed {
+  position: fixed;
+  top: 20px;
+}
