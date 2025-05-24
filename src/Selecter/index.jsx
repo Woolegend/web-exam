@@ -2,7 +2,11 @@ import { useState } from "react";
 import "./style.css";
 
 export default function Selector() {
-  const [style, setStyle] = useState({ id: false, class: false });
+  const [style, setStyle] = useState({
+    id: false,
+    class: false,
+    ":first-child": false,
+  });
 
   const handleClickStyle = (e) =>
     setStyle((prev) => {
@@ -14,10 +18,21 @@ export default function Selector() {
     <div className="wrapper">
       <h2>selector</h2>
       <ul className="selector-container">
-        <li id={style.id ? "id" : ""} className={style.class ? "class" : ""}>
+        <li
+          id={style.id ? "id" : ""}
+          className={`${style.class ? "class" : ""} ${
+            style[":first-child"] ? "first" : ""
+          }
+          `}
+        >
           <span>li class id</span>
         </li>
-        <li className={style.class ? "class" : ""}>
+        <li
+          className={`${style.class ? "class" : ""} ${
+            style[":first-child"] ? "first" : ""
+          }
+          `}
+        >
           <span>li class</span>
         </li>
         <li>

@@ -2,6 +2,8 @@
   display: flex;
   padding: 16px;
   justify-content: space-evenly;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 ul {
@@ -17,6 +19,8 @@ ul {
     border: 8px;
     font-size: 24px;
     font-weight: 600;
+    border: 1px solid black;
+    border-radius: 8px;
   }
 }
 
@@ -28,4 +32,13 @@ ul {
 .class {
   background-color: blue;
   color: white;
+}
+
+.first:first-child {
+  background-color: green;
+  color: white;
+}
+
+.class:hover {
+  background-color: aquamarine;
 }
