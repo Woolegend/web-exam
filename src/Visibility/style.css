@@ -1,0 +1,22 @@
+.visibility-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.box {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: whitesmoke;
+
+  &:nth-child(2) {
+    background-color: antiquewhite;
+  }
+}

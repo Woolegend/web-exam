@@ -1,19 +1,18 @@
 import { useState } from "react";
 import "./style.css";
 
-export default function Position() {
-  const positions = ["static", "absolute", "relative", "fixed", "sticky"];
-  const [style, setStyle] = useState("static");
+export default function Visibility() {
+  const positions = ["visible", "hidden"];
+  const [style, setStyle] = useState("visible");
 
   const handleClickStyle = (e) => setStyle(e.target.value);
 
   return (
     <div className="wrapper">
-      <h2>position : {style}</h2>
-      <div className="position-container">
+      <h2>Visibility : {style}</h2>
+      <div className="visibility-container">
         <div className="box" />
-        <div className={`box ${style}`} />
-        <div className="box" />
+        <div className="box" style={{ visibility: style }} />
         <div className="box" />
       </div>
       <div className="button-list">
