@@ -9,7 +9,7 @@ const JUSTIFY_CONTENT = {
   "space-around": "justify-around",
 };
 
-export default function JustifyContent() {
+export default function JustifyContent({ direction }) {
   const [selected, setSeleted] = useState("flex-start");
 
   const handleClickButton = (event) => setSeleted(event.target.value);
@@ -17,7 +17,9 @@ export default function JustifyContent() {
   return (
     <div className="wrapper">
       <h2>justify-content : {selected}</h2>
-      <div className={`flex-container ${JUSTIFY_CONTENT[selected]}`}>
+      <div
+        className={`justify-container ${JUSTIFY_CONTENT[selected]} ${direction}`}
+      >
         {Array.from({ length: 3 }).map((_, index) => (
           <div key={index} className="flex-item" />
         ))}

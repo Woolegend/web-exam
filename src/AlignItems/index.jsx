@@ -7,7 +7,7 @@ const AlIGN_ITEMS = {
   "flex-end": "align-end",
 };
 
-export default function AlignItems() {
+export default function AlignItems({ direction }) {
   const [selected, setSeleted] = useState("align-start");
 
   const handleClickButton = (event) => setSeleted(event.target.value);
@@ -15,7 +15,7 @@ export default function AlignItems() {
   return (
     <div className="wrapper">
       <h2>align-items : {selected}</h2>
-      <div className={`align-container ${AlIGN_ITEMS[selected]}`}>
+      <div className={`align-container ${AlIGN_ITEMS[selected]} ${direction}`}>
         {Array.from({ length: 3 }).map((_, index) => (
           <div key={index} className="flex-item" />
         ))}

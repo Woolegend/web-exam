@@ -1,10 +1,15 @@
-.flex-container {
+.justify-container {
   width: 100%;
   display: flex;
   padding: 16px;
   border: 2px solid grey;
   border-radius: 8px;
   justify-content: flex-start;
+}
+
+.column {
+  flex-direction: column;
+  height: 800px;
 }
 
 .justify-center {
