@@ -1,31 +1,26 @@
 import { useState } from "react";
 import "./App.css";
 import Chap15 from "./Chap15";
+import Chap10 from "./Chap10";
 
 function App() {
   const [chap, setChap] = useState("10");
-
-  const handleClickChap = (e) => setChap(e.target.value);
 
   return (
     <div className="App">
       <div id="container">
         <div className="chap-container">
-          <button
-            className={`chap ${chap === "10" ? "chap-highlight" : ""}`}
-            value="10"
-            onClick={handleClickChap}
-          >
-            Chap 10
-          </button>
-          <button
-            className={`chap ${chap === "15" ? "chap-highlight" : ""}`}
-            value="15"
-            onClick={handleClickChap}
-          >
-            Chap 15
-          </button>
+          {["10", "15"].map((e) => (
+            <button
+              className={`chap ${chap === e ? "chap-highlight" : ""}`}
+              onClick={() => {
+                setChap(e);
+              }}
+              children={"chap" + e}
+            />
+          ))}
         </div>
+        {chap === "10" && <Chap10 />}
         {chap === "15" && <Chap15 />}
       </div>
     </div>

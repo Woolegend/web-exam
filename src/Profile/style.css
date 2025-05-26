@@ -1,0 +1,18 @@
+.profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.profile-birth {
+  font-size: 12px;
+  color: grey;
+  margin-bottom: 8px;
+}
