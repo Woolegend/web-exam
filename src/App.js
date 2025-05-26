@@ -1,35 +1,32 @@
 import { useState } from "react";
-import AlignItems from "./AlignItems";
 import "./App.css";
-import JustifyContent from "./JustifyContent";
-import Position from "./Position";
-import Selector from "./Selecter";
-import Visibility from "./Visibility";
+import Chap15 from "./Chap15";
 
 function App() {
-  const [direction, setDirection] = useState("row");
+  const [chap, setChap] = useState("10");
 
-  const handleClickDirection = (e) => setDirection(e.target.value);
+  const handleClickChap = (e) => setChap(e.target.value);
 
   return (
     <div className="App">
       <div id="container">
-        <Selector />
-        <Position />
-        <Visibility />
-        <div className="wrapper">
-          <h2>flex-direction : {direction}</h2>
-          <div className="button-list">
-            <button value="row" onClick={handleClickDirection}>
-              row
-            </button>
-            <button value="column" onClick={handleClickDirection}>
-              column
-            </button>
-          </div>
+        <div className="chap-container">
+          <button
+            className={`chap ${chap === "10" ? "chap-highlight" : ""}`}
+            value="10"
+            onClick={handleClickChap}
+          >
+            Chap 10
+          </button>
+          <button
+            className={`chap ${chap === "15" ? "chap-highlight" : ""}`}
+            value="15"
+            onClick={handleClickChap}
+          >
+            Chap 15
+          </button>
         </div>
-        <JustifyContent direction={direction} />
-        <AlignItems direction={direction} />
+        {chap === "15" && <Chap15 />}
       </div>
     </div>
   );
