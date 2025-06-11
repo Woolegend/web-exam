@@ -3,7 +3,6 @@ import Position from "./Position";
 import Selector from "./Selecter";
 import AlignItems from "./AlignItems";
 import { useState } from "react";
-import StyledComponent from "./StyledComponents/Button";
 
 export default function Chap15() {
   const [direction, setDirection] = useState("row");
@@ -27,7 +26,6 @@ export default function Chap15() {
       </div>
       <JustifyContent direction={direction} />
       <AlignItems direction={direction} />
-      <StyledComponent />
     </>
   );
 }
